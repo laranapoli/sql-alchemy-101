@@ -21,5 +21,8 @@
             - Dialect: Mecanismos específicos para cada banco de dados
                 - Dialetos são chamadas diretas para os drivers específicos para databases específicos.
             - Pool: Deixa conexões em memória para ser mais fácil reutilizar
+                - A instrução de abertura de conexão é geralmente cara
         - SQL Expression Language: Construções em Python para representar SQL
         - Schemas/Types: Construções em python que representam tabelas, colunas e tipos de dados.
+
+49:36
