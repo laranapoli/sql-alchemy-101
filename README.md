@@ -25,4 +25,34 @@
         - SQL Expression Language: Construções em Python para representar SQL
         - Schemas/Types: Construções em python que representam tabelas, colunas e tipos de dados.
 
-49:36
+## Result
+- O resultado obtido no execute é um objeto especial chamado Result.
+- Ele implementa diversos métodos, além de ser um iterável.
+- Alguns métodos:
+    - .fetchone(): pega o primeiro
+    - .fetchmany(3) / .patitions(3): pega alguns valores
+    - .fetchall() / .all(): pega todos os valores
+    - .first(): pega 1, mas não dá erro se não conseguir
+    
+## Schemas / Types
+- Os metadados das tabelas podem ser descritos por Schemas e seus determinados Tipos
+
+## Reflection
+- Olha para o branco e traz relações
+- Funções de inspeção são agregadas a construção de schemas
+- Evitam a criação de metadados em um banco que já existe
+
+## SQL Expression Language
+- Queremos os metadados para usar no motor de busca: SQL Expression Language (query builder)
+- É uma alternativa a função text() - em que escrevemos SQL na mão (string)
+- O Core tem um grupo de funções e objetos que ajudam a montar o SQL:
+    - DQL: Data Query Language
+    - DML: Data Manipulation Language
+
+## CompoundSelect
+- O resultado do select é um builder
+- Podemos encadear comandos e fazer busca mais complexa
+
+## Conectivos lógicos
+
+1:35:45

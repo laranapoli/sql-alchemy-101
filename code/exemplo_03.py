@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, text
+from sqlalchemy.ext.asyncio import create_async_engine # para async
 
-engine = create_engine(
+engine = create_async_engine(
     'sqlite://',
     echo=True
 )
@@ -15,7 +16,10 @@ con.close()
 
 
 # OU:
-with engine.connect() as con:
+async with engine.connect() as con:
     sql = text('select id, name, comment from comments')
-    result = con.execute(sql)
+    result = await con.execute(sql)
     
+
+# Retorna todos os dados:
+result.fetchall()
