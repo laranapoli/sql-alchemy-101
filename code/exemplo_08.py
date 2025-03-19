@@ -22,10 +22,11 @@ with engine.connect() as con:
     print(result.fetchmany(10))
 
 stmt = (
-    sa.select(t.c.id)
+    sa.select(t.c.id, g.c.id) # tabela imaginária
     .where(t.c.name == 'Lara')
     .limit(3)
     .order_by(t.c.id)
+    .join(g)
 )
 
 print(stmt)
